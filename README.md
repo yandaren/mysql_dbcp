@@ -12,7 +12,12 @@ mysql-connector-c++要依赖于boost库，而我们的开发库不想引入boost
 
 ```
 #include <iostream>
-#include <dbcp.hpp>
+#include <dbcp/connection_config.hpp>
+#include <dbcp/connection_wrapper.hpp>
+#include <dbcp/resultset.hpp>
+#include <dbcp/driver/mysql/mysql_connection.hpp>
+#include <dbcp/driver/mysql/mysql_driver.hpp>
+#include <dbcp/details/datasource_factory.hpp>
 #include <time.h>
 #include <random>
 
@@ -601,4 +606,5 @@ int main()
     system("pause");
     return 0;
 }
+
 ```
