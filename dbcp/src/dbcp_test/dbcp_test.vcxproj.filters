@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{a8ee6794-c9d1-4438-9477-8897142972dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\dbcp">
+      <UniqueIdentifier>{b748cb16-33d3-46a0-b182-72901f3f7dea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\dbcp\details">
+      <UniqueIdentifier>{f870df73-c591-481a-bb5f-43dc8d6bcbf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\dbcp\driver">
+      <UniqueIdentifier>{9aa9062f-5dc6-482f-8b72-bf8910bdbda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\dbcp\driver\mysql">
+      <UniqueIdentifier>{1bc485c4-f14c-4846-bc1b-68645a52fbf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\dbcp\internal">
+      <UniqueIdentifier>{ea4a0a24-1371-4254-bada-dd5aaad2ce26}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\dbcp\details\datasource_impl.hpp">
+      <Filter>include\dbcp\details</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_config.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_connection.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_prepared_resultset.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_prepared_statement.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_resultset.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_resultset_metadata.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_statement.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\internal\logger_handler.hpp">
+      <Filter>include\dbcp\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\connection.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\connection_config.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\connection_wrapper.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\datasource.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\prepared_statement.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\resultset.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\resultset_metadata.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\statement.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_driver.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\basedefine.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_prepared_resultset_metadata.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\error_code.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_result_databind.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_bind_buffer.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_param_databind.hpp">
+      <Filter>include\dbcp\driver\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\config.hpp">
+      <Filter>include\dbcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\dbcp\details\datasource_factory.hpp">
+      <Filter>include\dbcp\details</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dbcp_test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EDB27803-49F2-4725-AF23-D42190DAE4A0}</ProjectGuid>
+    <RootNamespace>dbcp_test</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../include;$(SolutionDir)../../../3rd/mysql-connector-c-6.1.10/include;$(SolutionDir)../../../3rd/asio-asio-1-11-0/asio/include;$(SolutionDir)../../../</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../../3rd/mysql-connector-c-6.1.10/lib/win/msvc120/x86/debug;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\..\..\..\3rd\mysql-connector-c-6.1.10\lib\win\msvc120\x86\debug\libmysql.dll  ..\Debug\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../include;$(SolutionDir)../../../3rd/mysql-connector-c-6.1.10/include;$(SolutionDir)../../../3rd/asio-asio-1-11-0/asio/include;$(SolutionDir)../../../</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../../3rd/mysql-connector-c-6.1.10/lib/win/msvc120/x86/release;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\..\..\..\3rd\mysql-connector-c-6.1.10\lib\win\msvc120\x86\release\libmysql.dll  ..\Release\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\dbcp.hpp" />
+    <ClInclude Include="..\..\include\dbcp\basedefine.hpp" />
+    <ClInclude Include="..\..\include\dbcp\config.hpp" />
+    <ClInclude Include="..\..\include\dbcp\connection.hpp" />
+    <ClInclude Include="..\..\include\dbcp\connection_config.hpp" />
+    <ClInclude Include="..\..\include\dbcp\connection_wrapper.hpp" />
+    <ClInclude Include="..\..\include\dbcp\datasource.hpp" />
+    <ClInclude Include="..\..\include\dbcp\details\datasource_factory.hpp" />
+    <ClInclude Include="..\..\include\dbcp\details\datasource_impl.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_bind_buffer.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_config.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_connection.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_param_databind.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_result_databind.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_driver.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_prepared_resultset.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_prepared_resultset_metadata.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_prepared_statement.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_resultset.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_resultset_metadata.hpp" />
+    <ClInclude Include="..\..\include\dbcp\driver\mysql\mysql_statement.hpp" />
+    <ClInclude Include="..\..\include\dbcp\error_code.hpp" />
+    <ClInclude Include="..\..\include\dbcp\internal\logger_handler.hpp" />
+    <ClInclude Include="..\..\include\dbcp\prepared_statement.hpp" />
+    <ClInclude Include="..\..\include\dbcp\resultset.hpp" />
+    <ClInclude Include="..\..\include\dbcp\resultset_metadata.hpp" />
+    <ClInclude Include="..\..\include\dbcp\statement.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dbcp_test.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
